@@ -1,0 +1,82 @@
+.instructors-section {
+    display: flex;
+    justify-content: center;
+  
+    .instructors-box {
+      border: 2px solid #ffffff;
+      border-radius: 10px;
+      padding: 2.5rem 2rem;
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+      background-color: transparent;
+      background-image: linear-gradient(148deg, #105A73 20%, #000000 100%);
+  
+      h2 {
+        font-family: "Poppins", Sans-serif;
+        font-size: 35px;
+        font-weight: 500;
+        color: #FFFFFF;
+      }
+  
+      .subtitle {
+        font-size: 15px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        margin-bottom: 2rem;
+      }
+  
+      .instructors-list {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+  
+        img {
+          width: 200px;
+          height: 220px;
+          object-fit: cover;
+          border-radius: 12px;
+          border: 1px solid #fff;
+        }
+      }
+  
+      .closing-remark {
+        font-size: 15px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        margin-bottom: 2rem;
+      }
+  
+      .cta-button {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .instructors-section {
+      .instructors-box {
+        h2 {
+          font-size: 18px;
+        }
+  
+        .subtitle,
+        .closing-remark {
+          font-size: 14px;
+        }
+  
+        .instructors-list {
+        //   flex-direction: column;
+          align-items: center;
+  
+          img {
+            width: 100px;
+            height: 120px;
+          }
+        }
+      }
+    }
+  }
+  

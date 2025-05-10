@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="pricing-certification">
+    <h3>Gain Work Experience from Malaysia</h3>
+
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let feature of features">
+        <div class="icon">
+          <i class="{{ feature.icon }}"></i>
+        </div>
+        <div class="content">
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="track-record">
+      <h2>Our Proven Track Record of Success</h2>
+
+      <div class="track-content">
+        <!-- Left image -->
+        <div class="track-image">
+          <img
+            src="https://defendpro.in/wp-content/uploads/2024/12/Layer-6-300x280.png"
+            alt="Track Record Image"
+          />
+        </div>
+
+        <!-- Right content -->
+        <div class="track-list">
+          <ul>
+            <li>
+              <i class="fas fa-check"></i>
+              2000+ Students Placed in Top Tech Companies
+            </li>
+            <li>
+              <i class="fas fa-check"></i>
+              Average Placement Package: ₹6–12 LPA
+            </li>
+            <li>
+              <i class="fas fa-check"></i>
+              Alumni Working in India and Across the Globe
+            </li>
+            <li>
+              <i class="fas fa-check"></i>
+              International certificate from
+            </li>
+            <li>
+              <a href="https://www.scorpius.com.au" target="_blank"
+                >https://www.scorpius.com.au</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center my-5">
+      <app-cta-button
+        text="Get Started Today"
+        icon="fas fa-hand-point-right"
+      ></app-cta-button>
+    </div>
+  </div>
+</div>

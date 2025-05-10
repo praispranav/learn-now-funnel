@@ -1,0 +1,113 @@
+.testimonials-section {
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+
+  h2 {
+    font-size: 35px;
+    font-family: "Poppins", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .slider-viewport {
+    margin: 0 auto;
+    //   overflow: auto;
+    position: relative;
+  }
+
+  .slider-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .slide {
+    flex: 0 0 33.3333%;
+    padding: 1rem;
+    box-sizing: border-box;
+    opacity: 1;
+    transform: translateY(0);
+    border: 1px solid #7a7a7a;
+    border-radius: 12px;
+    background-color: transparent;
+    background-image: linear-gradient(148deg, #24615a 0%, #105a73 100%);
+    margin: 0 0.5rem;
+    text-align: left;
+    .testimonial-text {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #fff;
+      }
+
+      h4 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 14px;
+        color: #ccc;
+      }
+
+      .quote-icon {
+        margin-left: auto;
+        font-size: 32px;
+        font-family: serif;
+        color: #ccc;
+      }
+    }
+  }
+
+  .cta-button {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .slide {
+      flex: 0 0 100%;
+      margin: 0;
+    }
+.testimonials-section {
+flex-direction: row !important;
+}
+    .user-info {
+    
+flex-direction: row !important;
+    
+        display: flex;
+    justify-content: space-between !important;
+    align-items: start !important;
+    
+    }
+    h2 {
+      font-size: 24px;
+    }
+    .slider-viewport {
+      overflow: hidden;
+    }
+    .user-info {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .quote-icon {
+        align-self: flex-end;
+      }
+    }
+  }
+}

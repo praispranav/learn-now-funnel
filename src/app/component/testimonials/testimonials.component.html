@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="testimonials-section">
+    <h2>What Our Students Say</h2>
+
+    <div class="slider-viewport">
+      <div class="slider-track">
+        <div class="slide" *ngFor="let testimonial of visibleTestimonials">
+          <p class="testimonial-text">{{ testimonial.text }}</p>
+          <div class="user-info">
+            <img [src]="testimonial.image" alt="{{ testimonial.name }}" />
+            <div>
+              <h4>{{ testimonial.name }}</h4>
+              <p>{{ testimonial.role }}</p>
+            </div>
+            <span class="quote-icon">”</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-button">
+      <app-cta-button
+        text="Get Started Today"
+        icon="fas fa-hand-point-right"
+      ></app-cta-button>
+    </div>
+  </div>
+</div>

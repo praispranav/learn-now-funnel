@@ -1,0 +1,21 @@
+<div class="container">
+  <section class="program-check-section">
+    <h2>Is This Program Right for You?</h2>
+    <p>This program is designed for</p>
+
+    <div class="content">
+      <div class="image">
+        <img
+          src="https://defendpro.in/wp-content/uploads/2025/03/pexels-cottonbro-3205567-768x989.jpg"
+          alt="Group discussion"
+        />
+      </div>
+
+      <div class="reasons">
+        <div class="reason-box" *ngFor="let reason of reasons">
+          <i class="fa fa-arrow-right"></i> {{ reason }}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

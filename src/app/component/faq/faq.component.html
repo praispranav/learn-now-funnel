@@ -1,0 +1,16 @@
+<div class="container">
+<div class="faq-container">
+    <h2>Got Questions? We've Got Answers!</h2>
+    <div class="faq-item" *ngFor="let faq of faqs; let i = index">
+      <div class="question" (click)="toggle(i)">
+        {{ faq.question }}
+        <span class="icon">{{ faq.isOpen ? '▲' : '▼' }}</span>
+      </div>
+      <div class="answer-wrapper" [class.open]="faq.isOpen">
+        <div class="answer">
+          {{ faq.answer }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  

@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="salary-alumni-section">
+    <h2>Average Salary</h2>
+    <div class="salary-info">
+      <i class="fas fa-sack-dollar salary-icon"></i>
+      <p>
+        ₹6–12 LPA for freshers, with global opportunities offering even higher
+        packages.
+      </p>
+    </div>
+
+    <div class="alumni-section">
+      <h3>Hear From Our Successful Alumni</h3>
+      <div class="alumni-grid">
+        <div class="alumni-card" *ngFor="let alum of alumni">
+          <img [src]="alum.image" alt="{{ alum.name }}" />
+          <p>{{ alum.name }} – {{ alum.company }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex align-items-center justify-content-center mb-4">
+    <app-cta-button
+      text="Get Started Today"
+      icon="fas fa-hand-point-right"
+    ></app-cta-button>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.footer-container {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    font-family: Arial, sans-serif;
+  
+    .footer-links {
+      margin-bottom: 0.5rem;
+  
+      a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 0.5rem;
+        font-weight: 500;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+  
+      span {
+        color: #888;
+        margin: 0 0.3rem;
+      }
+    }
+  
+    .footer-copy {
+      color: #aaa;
+    }
+  }
+  @media (max-width: 600px) {
+    .footer-links {
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+  }
+  

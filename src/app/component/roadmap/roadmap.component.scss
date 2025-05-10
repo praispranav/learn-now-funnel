@@ -1,0 +1,144 @@
+.roadmap-section {
+  background: #000;
+  color: white;
+  padding: 4rem 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  // flex-wrap: wrap;
+
+  .title {
+    font-family: "Poppins", Sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    color: #ffffff;
+    width: 100%;
+    //   text-align: center;
+  }
+
+  .phase-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .phase-card {
+    background-color: transparent;
+    background-image: linear-gradient(152deg, #24615a 18%, #000000 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    width: 600px;
+    transition: transform 0.3s;
+    margin: 0 auto;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .phase-label {
+      padding: 6px 10px;
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+      border: 1px solid #fff;
+      display: inline-block;
+    }
+
+    h3 {
+      font-family: "Poppins", Sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+        padding: 0.6rem 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .phase-content {
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+        padding: 0.6rem 0.8rem;
+        border-radius: 0.4rem;
+        border: 1px solid #7a7a7a;
+      }
+
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .roadmap-section {
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem 1rem;
+  }
+
+  .phase-card-container {
+    width: 100% !important;
+    gap: 2rem;
+  }
+
+  .phase-card {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .phase-label {
+    font-size: 0.9rem;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  ul li {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 26px !important;
+    text-align: left;
+  }
+
+  .phase-card {
+    padding: 15px !important;
+  }
+
+  .phase-label {
+    padding: 4px 8px !important;
+  }
+
+  h3 {
+    font-size: 22px !important;
+  }
+
+  ul li {
+    font-size: 0.8rem;
+  }
+
+  .phase-content {
+    font-size: 0.85rem;
+  }
+}
