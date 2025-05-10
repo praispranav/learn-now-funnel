@@ -1,0 +1,29 @@
+<div class="modal-overlay" (click)="onClose()"></div>
+
+<div class="modal-box">
+  <div class="modal-header">
+    <h3>Become a Full Stack Developer – Enroll Now!</h3>
+    <button class="close-button" (click)="onClose()"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+
+  <form class="modal-form">
+    <label>Name</label>
+    <input type="text" placeholder="Enter Your Full Name" />
+
+    <label>Email</label>
+    <input type="email" placeholder="Enter Your Email Id" />
+
+    <label>Phone Number</label>
+    <input type="tel" placeholder="Enter Your Phone Number" />
+
+    <label>Education</label>
+    <select>
+      <option>BCA</option>
+      <option>B.Tech</option>
+      <option>MCA</option>
+      <option>Other</option>
+    </select>
+
+    <button class="cta-btn" type="submit">Submit</button>
+  </form>
+</div>

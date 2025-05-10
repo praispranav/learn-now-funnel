@@ -1,4 +1,5 @@
-<button class="cta-btn mt-3">
-    <i [class]="icon + ' me-2'"></i> {{ text }}
-  </button>
-  
+<button class="cta-btn mt-3" (click)="openModal()">
+  <i [class]="icon + ' me-2'"></i> {{ text }}
+</button>
+
+<app-modal *ngIf="showModal" (close)="closeModal()"></app-modal>
