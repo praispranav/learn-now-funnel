@@ -1,33 +1,34 @@
 <div class="container">
     <div class="pricing-certification">
         <h2>Invest in Your Future Today at an Unbeatable Price</h2>
-      
         <div class="pricing-card">
           <p><strong>Original Price:</strong> ₹49,999</p>
           <p><strong>Discounted Price:</strong> ₹9,999 <span>(Limited Time Offer)</span></p>
           <p class="savings">Enroll Now and Save ₹35,000!</p>
-    <app-cta-button text="Enroll Now" icon="fas fa-hand-point-right"></app-cta-button>
-       
-          <p class="caption">Claim Your Discount</p>
+        
+          <ng-container *ngIf="!isV2Route">
+            <app-cta-button text="Enroll Now" icon="fas fa-hand-point-right"></app-cta-button>
+            <p class="caption">Claim Your Discount</p>
+          </ng-container>
         </div>
-      
+        
         <h3>Get Certified and Recognized Worldwide</h3>
-      
+        
         <div class="features-grid">
-            <div class="feature-card" *ngFor="let feature of features">
-              <div class="icon">
-                <i class="{{feature.icon}}"></i>
-              </div>
-              <div class="content">
-                <h3>{{ feature.title }}</h3>
-                <p>{{ feature.description }}</p>
-              </div>
+          <div class="feature-card" *ngFor="let feature of features">
+            <div class="icon">
+              <i class="{{feature.icon}}"></i>
+            </div>
+            <div class="content">
+              <h3>{{ feature.title }}</h3>
+              <p>{{ feature.description }}</p>
             </div>
           </div>
-          <div class="d-flex align-items-center justify-content-center">
-
-              <app-cta-button text="Get Started Today" icon="fas fa-hand-point-right"></app-cta-button>
-            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center" *ngIf="!isV2Route">
+          <app-cta-button text="Get Started Today" icon="fas fa-hand-point-right"></app-cta-button>
+        </div>
         
       </div>
       

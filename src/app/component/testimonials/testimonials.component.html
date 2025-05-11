@@ -18,7 +18,7 @@
       </div>
     </div>
 
-    <div class="cta-button">
+    <div class="cta-button"  *ngIf="!isV2Route">
       <app-cta-button
         text="Get Started Today"
         icon="fas fa-hand-point-right"

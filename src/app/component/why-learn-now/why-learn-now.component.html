@@ -15,6 +15,11 @@
         </div>
       </div>
     </div>
-    <app-cta-button text="Get Started Today" icon="fas fa-hand-point-right"></app-cta-button>
+    <app-cta-button
+      *ngIf="!isV2Route"
+      text="Get Started Today"
+      icon="fas fa-hand-point-right"
+    >
+    </app-cta-button>
   </section>
 </div>

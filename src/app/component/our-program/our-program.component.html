@@ -1,8 +1,6 @@
 <div class="container">
   <section class="why-learn-section">
-    <h2 class="section-title">
-      What Makes Our Program Stand Out?
-    </h2>
+    <h2 class="section-title">What Makes Our Program Stand Out?</h2>
 
     <div class="features-grid">
       <div class="feature-card" *ngFor="let feature of features">
@@ -15,9 +13,11 @@
         </div>
       </div>
     </div>
-    <app-cta-button
-      text="Get Started Today"
-      icon="fas fa-hand-point-right"
-    ></app-cta-button>
+    <div *ngIf="!isV2Route">
+      <app-cta-button
+        text="Get Started Today"
+        icon="fas fa-hand-point-right"
+      ></app-cta-button>
+    </div>
   </section>
 </div>

@@ -6,16 +6,18 @@
         Join Learn Now Academy’s MEAN/MERN Stack Program and take the first step
         towards a successful tech career.
       </p>
-      <p class="offer">
+      <p class="offer" *ngIf="!isV2Route">
         <strong>Limited Time Offer – Enroll Now at Just ₹9,999!</strong>
       </p>
-      <div class="mb-4">
+      <div class="mb-4" *ngIf="!isV2Route">
         <app-cta-button
           text="Start Your Journey"
           icon="fas fa-hand-point-right"
         ></app-cta-button>
+        <p class="caption">Take the first step today</p>
       </div>
     </div>
+
     <div class="cta-image">
       <img
         src="https://defendpro.in/wp-content/uploads/2024/12/1-1-300x258.png"
