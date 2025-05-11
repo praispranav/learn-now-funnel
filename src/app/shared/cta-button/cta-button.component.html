@@ -1,4 +1,4 @@
-<button class="cta-btn mt-3" (click)="openModal()">
+<button class="cta-btn mt-3" (click)="openModal()" [ngStyle]="{'width': fullWidth ? '100%' : 'auto'}">
   <i [class]="icon + ' me-2'"></i> {{ text }}
 </button>
 

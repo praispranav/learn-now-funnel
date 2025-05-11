@@ -6,6 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem;
 
   h2 {
     font-size: 2rem;
@@ -19,13 +20,14 @@
     justify-content: center;
 
     .card {
-      padding: 1.5rem;
-      border-radius: 1rem;
+      padding: 20px;
+      border-radius: 10px;
       transition: 0.3s;
       background: none;
-
+      margin-bottom: 20px;
+border: 2px solid #7A7A7A;
       img {
-        margin: 2rem 0;
+        margin-bottom: 20px;
         border-radius: 10px;
         max-width: 100%;
         height: auto;
@@ -35,12 +37,12 @@
         color: #ffffff;
         font-family: "Poppins", sans-serif;
         font-size: 22px;
+        font-weight: 600;
       }
 
       p {
         font-size: 0.95rem;
         color: #ffffff;
-        margin: 1rem 0;
       }
 
     }

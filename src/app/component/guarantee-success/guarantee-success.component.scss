@@ -30,6 +30,8 @@
       gap: 1rem;
       margin-bottom: 1.5rem;
 
+      
+
       .icon {
         background-color: rgb(16, 90, 115);
         color: #fff;
@@ -61,6 +63,10 @@
         font-weight: 400;
       }
     }
+
+    .guarantee-item:last-child {
+      margin-bottom: 0 !important;
+    }
   }
 
   .guarantee-image {
@@ -77,5 +83,12 @@
     .guarantee-container {
       flex-direction: column;
     }
-  }
+    .guarantee-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        max-width: 80%;
+      
+        }}  }
 }

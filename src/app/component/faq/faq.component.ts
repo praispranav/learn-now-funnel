@@ -12,7 +12,7 @@ export class FaqComponent {
     {
       question: 'Is there any job guarantee?',
       answer: 'Yes, we offer 100% job assurance upon course completion.',
-      isOpen: false
+      isOpen: true
     },
     {
       question: 'What is the duration of the program?',

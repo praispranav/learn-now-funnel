@@ -9,8 +9,9 @@
     }
   
     .faq-item {
-      border-top: 1px solid #ffffff;
-      padding: 1rem 0;
+      border: 1px solid #ffffff;
+      border-bottom: 0;
+      padding: 1rem ;
   
       .question {
         cursor: pointer;

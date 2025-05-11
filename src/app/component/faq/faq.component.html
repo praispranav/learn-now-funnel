@@ -4,7 +4,7 @@
     <div class="faq-item" *ngFor="let faq of faqs; let i = index">
       <div class="question" (click)="toggle(i)">
         {{ faq.question }}
-        <span class="icon">{{ faq.isOpen ? '▲' : '▼' }}</span>
+        <span class="icon">{{ faq.isOpen ? '▶' : '▼' }}</span>
       </div>
       <div class="answer-wrapper" [class.open]="faq.isOpen">
         <div class="answer">

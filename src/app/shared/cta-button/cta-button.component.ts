@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 export class CtaButtonComponent {
   @Input() text: string = 'Get Started Today';
   @Input() icon: string = 'fas fa-rocket';
+  @Input('fullWidth') fullWidth?: boolean = false;
 
   showModal = false;
 

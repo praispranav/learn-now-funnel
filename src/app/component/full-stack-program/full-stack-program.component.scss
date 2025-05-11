@@ -83,8 +83,21 @@
       max-width: 100%;
     }
 
-    .handshake-img {
-      margin-top: 2rem;
-    }
   }
+}
+@media (max-width: 768px) {
+
+  .handshake-img {
+    img {
+
+      margin-top: 2rem;
+      max-width: 90% !important;
+    }
+
+  }
+  .btn-content {
+display: flex;
+align-items: center;
+justify-content: center;
+}
 }

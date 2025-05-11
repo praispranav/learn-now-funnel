@@ -63,7 +63,7 @@ I am extremely grateful for the internship opportunity at Learn Now Academy. The
   startAutoSlide() {
     this.intervalId = setInterval(() => {
       this.startIndex = (this.startIndex + 1) % this.testimonials.length;
-    }, 20000);
+    }, 3000);
   }
 
   get visibleTestimonials() {
