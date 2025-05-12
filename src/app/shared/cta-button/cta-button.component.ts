@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './cta-button.component.scss'
 })
 export class CtaButtonComponent {
-  @Input() text: string = 'Get Started Today';
+  @Input() text: string = 'Join Webinar';
   @Input() icon: string = 'fas fa-rocket';
   @Input('fullWidth') fullWidth?: boolean = false;
   @Input('leadsType') leadsType?: string = 'Webinar';
