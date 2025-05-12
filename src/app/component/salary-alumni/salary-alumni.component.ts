@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CtaButtonComponent } from "../../shared/cta-button/cta-button.component";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-salary-alumni',
@@ -36,4 +37,9 @@ export class SalaryAlumniComponent {
       image: 'https://defendpro.in/wp-content/uploads/2025/01/Tanu.jpeg'
     }
   ];
+  isV2Route: boolean = false;
+
+  constructor(private router: Router) {
+    this.isV2Route = this.router.url === '/v2';
+  }
 }

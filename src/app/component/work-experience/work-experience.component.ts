@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CtaButtonComponent } from '../../shared/cta-button/cta-button.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-work-experience',
@@ -9,6 +10,12 @@ import { CtaButtonComponent } from '../../shared/cta-button/cta-button.component
   styleUrl: './work-experience.component.scss'
 })
 export class WorkExperienceComponent {
+  isV2Route: boolean = false;
+
+  constructor(private router: Router) {
+    this.isV2Route = this.router.url === '/v2';
+  }
+  
   features = [
     {icon:"fa-solid fa-earth-asia",
       title: 'Global Exposure',

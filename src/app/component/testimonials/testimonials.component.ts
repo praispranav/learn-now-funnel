@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { CtaButtonComponent } from '../../shared/cta-button/cta-button.component';
 import { Component } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-testimonials',
@@ -51,7 +52,11 @@ I am extremely grateful for the internship opportunity at Learn Now Academy. The
   ];
   startIndex = 0;
   intervalId: any;
+  isV2Route: boolean = false;
 
+  constructor(private router: Router) {
+    this.isV2Route = this.router.url === '/v2';
+  }
   ngOnInit() {
     this.startAutoSlide();
   }

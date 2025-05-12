@@ -29,9 +29,13 @@
       </button>
     </div>
 
-    <h4>Enroll Now at Just ₹9,999 (Limited Time Offer)</h4>
+    <h4 *ngIf="!isV2Route">Enroll Now at Just ₹9,999 (Limited Time Offer)</h4>
 
-    <app-cta-button text="Get Started Today" icon="fas fa-hand-point-right"></app-cta-button>
-
+    <app-cta-button
+      *ngIf="!isV2Route"
+      text="Get Started Today ( ₹ 199 )"
+      icon="fas fa-hand-point-right">
+    </app-cta-button>
+    
   </div>
 </div>

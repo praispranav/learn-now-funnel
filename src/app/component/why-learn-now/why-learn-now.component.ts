@@ -1,12 +1,14 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { CtaButtonComponent } from '../../shared/cta-button/cta-button.component';
 
 @Component({
   selector: 'app-why-learn-now',
+  standalone: true,
   imports: [CommonModule, CtaButtonComponent],
   templateUrl: './why-learn-now.component.html',
-  styleUrl: './why-learn-now.component.scss',
+  styleUrls: ['./why-learn-now.component.scss'],
 })
 export class WhyLearnNowComponent {
   features = [
@@ -33,4 +35,10 @@ export class WhyLearnNowComponent {
         'Get assistance in securing jobs abroad and gain international work experience.',
     },
   ];
+
+  isV2Route: boolean = false;
+
+  constructor(private router: Router) {
+    this.isV2Route = this.router.url === '/v2';
+  }
 }

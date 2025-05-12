@@ -48,10 +48,11 @@
         <p>Interactive sessions with expert instructors.</p>
       </div>
     </div>
-
-    <app-cta-button
-      text="Get Started Today"
-      icon="fas fa-hand-point-right"
-    ></app-cta-button>
+    <div *ngIf="!isV2Route">
+      <app-cta-button
+        text="Get Started Today ( ₹ 199 )"
+        icon="fas fa-hand-point-right"
+      ></app-cta-button>
+    </div>
   </section>
 </div>
