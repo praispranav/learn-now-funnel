@@ -65,11 +65,11 @@ export class ModalComponent {
 
     const leadsType = sessionStorage.getItem('leadsType');
     if(leadsType === 'Full'){
-      window.open(fullPaymentLink, '_blank');
+      window.open(fullPaymentLink, );
     } else if (leadsType === 'Partial') {
-      window.open(partialPaymentLink, '_blank');
+      window.open(partialPaymentLink, );
     } else {
-      window.open(webinarLink, '_blank');
+      window.open(webinarLink,);
     }
 
     console.log('Modal closed');
