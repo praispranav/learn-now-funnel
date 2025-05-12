@@ -1,29 +1,84 @@
-<div class="modal-overlay" (click)="onClose()"></div>
-
+<div class="modal-overlay" (click)="close.emit()"></div>
 <div class="modal-box">
   <div class="modal-header">
     <h3>Become a Full Stack Developer – Enroll Now!</h3>
-    <button class="close-button" (click)="onClose()"><i class="fa-solid fa-xmark"></i></button>
+    <button class="close-button" (click)="close.emit()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
   </div>
+  <form class="modal-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter Your Full Name"
+        formControlName="name"
+        [ngClass]="{ 'is-invalid': form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched) }"
+      />
+      <div
+        *ngIf="form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)"
+        class="error-message"
+      >
+        <div *ngIf="form.get('name')?.errors?.['required']">Name is required.</div>
+      </div>
+    </div>
 
-  <form class="modal-form">
-    <label>Name</label>
-    <input type="text" placeholder="Enter Your Full Name" />
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="Enter Your Email Id"
+        formControlName="email"
+        [ngClass]="{ 'is-invalid': form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched) }"
+      />
+      <div
+        *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)"
+        class="error-message"
+      >
+        <div *ngIf="form.get('email')?.errors?.['required']">Email is required.</div>
+        <div *ngIf="form.get('email')?.errors?.['email']">Please enter a valid email address.</div>
+      </div>
+    </div>
 
-    <label>Email</label>
-    <input type="email" placeholder="Enter Your Email Id" />
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input
+        type="tel"
+        id="phone"
+        placeholder="Enter Your Phone Number"
+        formControlName="phone"
+        [ngClass]="{ 'is-invalid': form.get('phone')?.invalid && (form.get('phone')?.dirty || form.get('phone')?.touched) }"
+      />
+      <div
+        *ngIf="form.get('phone')?.invalid && (form.get('phone')?.dirty || form.get('phone')?.touched)"
+        class="error-message"
+      >
+        <div *ngIf="form.get('phone')?.errors?.['required']">Phone number is required.</div>
+        </div>
+    </div>
 
-    <label>Phone Number</label>
-    <input type="tel" placeholder="Enter Your Phone Number" />
+    <div class="form-group">
+      <label for="education">Education</label>
+      <select
+        id="education"
+        formControlName="education"
+        [ngClass]="{ 'is-invalid': form.get('education')?.invalid && (form.get('education')?.dirty || form.get('education')?.touched) }"
+      >
+        <option selected value="bca">BCA</option>
+        <option value="btech">B.Tech</option>
+        <option value="mca">MCA</option>
+        <option value="other">Other</option>
+      </select>
+      <div
+        *ngIf="form.get('education')?.invalid && (form.get('education')?.dirty || form.get('education')?.touched)"
+        class="error-message"
+      >
+        <div *ngIf="form.get('education')?.errors?.['required']">Education is required.</div>
+      </div>
+    </div>
 
-    <label>Education</label>
-    <select>
-      <option>BCA</option>
-      <option>B.Tech</option>
-      <option>MCA</option>
-      <option>Other</option>
-    </select>
-
-    <button class="cta-btn" type="submit">Submit</button>
+    <button class="cta-btn" type="submit" [disabled]="loading">{{ !loading ? 'Submit' : 'Loading...'}}</button>
   </form>
 </div>
